@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BloxCraft - Minecraft-style Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="hud">
+      <div id="crosshair">+</div>
+      <div id="top-left">
+        <h1>BloxCraft</h1>
+        <p>WASD move • Space jump • Shift sprint</p>
+        <p>LMB break • RMB place • 1-5 select block</p>
+      </div>
+      <div id="status">Ready</div>
+      <div id="hotbar"></div>
+    </div>
+
+    <div id="start-overlay">
+      <div class="card" id="menu-card">
+        <h2>BloxCraft</h2>
+        <p>Minecraft-style sandbox in your browser.</p>
+        <label class="option">
+          Render Distance
+          <select id="render-distance">
+            <option value="1">Near (3x3 chunks)</option>
+            <option value="2" selected>Normal (5x5 chunks)</option>
+            <option value="3">Far (7x7 chunks)</option>
+          </select>
+        </label>
+        <button id="start-btn">Create World</button>
+      </div>
+
+      <div class="card hidden" id="loading-card">
+        <h2>Loading World...</h2>
+        <p id="loading-text">Preparing chunks...</p>
+        <div class="loading-track"><div id="loading-bar"></div></div>
+      </div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
